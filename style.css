@@ -36,6 +36,7 @@ body.dark {
 
 html {
     scroll-behavior: smooth;
+    overflow-x: clip;
 }
 
 body {
@@ -43,6 +44,7 @@ body {
     background: var(--bg);
     color: var(--text);
     line-height: 1.7;
+    overflow-x: clip;
     transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -75,12 +77,15 @@ body.dark nav {
 }
 
 .nav-container {
+    position: relative;
     width: min(1120px, calc(100% - 2rem));
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 0.75rem;
     padding: 1rem 0;
+    min-width: 0;
 }
 
 .logo {
@@ -770,7 +775,7 @@ body.dark .project-tags span {
     display: inline-flex;
     align-items: center;
     gap: 0.45rem;
-    margin-top: 0.35rem;
+    margin-top: 0.75rem;
     color: var(--accent);
     font-weight: 600;
     font-size: 0.92rem;
@@ -1200,4 +1205,263 @@ footer {
         .hero-content {
             padding: 0px;
         }
+}
+
+/* Fit every width: phone, tablet, laptop, and wide desktop */
+.container,
+.nav-container,
+.hero-card,
+.hero-content,
+.feature-card,
+.contact-panel,
+.timeline-content,
+.project-card,
+.skill-category,
+.edu-card {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.hero-content {
+    width: 100%;
+    padding: 0;
+}
+
+.hero-content h2 {
+    font-size: clamp(1.05rem, 2.5vw, 1.45rem);
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    color: var(--accent-strong);
+    max-width: 100%;
+}
+
+.eyebrow,
+.summary,
+.section-title,
+.project-card p,
+.timeline-content li,
+.project-card li,
+.feature-card p {
+    overflow-wrap: break-word;
+}
+
+.contact-info a,
+.contact-info span,
+.btn {
+    max-width: 100%;
+}
+
+.hero-badges,
+.hero-action-group,
+.contact-buttons,
+.skills-filter,
+.project-tags,
+.skill-tags {
+    max-width: 100%;
+}
+
+@media (max-width: 1180px) {
+    .nav-links {
+        position: absolute;
+        top: calc(100% + 0.35rem);
+        right: 0;
+        left: auto;
+        z-index: 1001;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.15rem;
+        width: min(320px, calc(100vw - 1.5rem));
+        padding: 0.65rem;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        background: var(--surface);
+        box-shadow: var(--shadow);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 0.7rem 0.85rem;
+        border-radius: 10px;
+    }
+
+    .nav-links a:hover {
+        background: var(--bg-secondary);
+    }
+
+    .hamburger {
+        display: grid;
+        flex-shrink: 0;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1024px) {
+    .contact-panel {
+        grid-template-columns: 1fr;
+        padding: 1.75rem;
+    }
+
+    .contact-buttons {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .feature-grid,
+    .projects-grid,
+    .skills-grid,
+    .edu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-category.featured-category {
+        grid-column: auto;
+    }
+
+    .hero {
+        padding: 2.5rem 0 2rem;
+    }
+
+    .hero-card {
+        padding: 1.35rem;
+    }
+
+    .hero-content,
+    .summary,
+    .hero-content h2,
+    .stat-item {
+        text-align: center;
+    }
+
+    .hero-content {
+        justify-items: center;
+        padding: 0;
+    }
+
+    .hero-badges,
+    .hero-action-group,
+    .contact-info {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-header {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-action-group {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .hero-action-group .btn,
+    .contact-buttons .btn {
+        width: 100%;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact-info a,
+    .contact-info span {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .eyebrow {
+        letter-spacing: 0.08em;
+        font-size: 0.78rem;
+    }
+
+    .name {
+        font-size: clamp(1.85rem, 10vw, 2.5rem);
+    }
+
+    .profile-photo {
+        max-width: min(240px, 72vw);
+    }
+
+    .section-title {
+        font-size: clamp(1.35rem, 6vw, 1.7rem);
+    }
+
+    .skills-filter {
+        justify-content: flex-start;
+    }
+
+    .timeline {
+        padding-left: 0.7rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .container,
+    .nav-container {
+        width: min(1120px, calc(100% - 1rem));
+    }
+
+    .logo {
+        font-size: 1.05rem;
+        letter-spacing: 0.04em;
+    }
+
+    .nav-actions {
+        gap: 0.4rem;
+    }
+
+    .nav-actions .btn.nav-btn {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.8rem;
+    }
+
+    .nav-actions .theme-toggle,
+    .nav-actions .hamburger {
+        width: 36px;
+        height: 36px;
+    }
+
+    .hero-card,
+    .contact-panel,
+    .skill-category,
+    .project-card {
+        padding: 1rem;
+        border-radius: 18px;
+    }
+
+    .hero-badges span,
+    .project-tags span,
+    .skill-tags span {
+        font-size: 0.8rem;
+    }
+
+    .stat-num {
+        font-size: 1.15rem;
+    }
 }
