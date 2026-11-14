@@ -7,7 +7,7 @@
     <meta name="description" content="Frontend Developer with nearly 2 years of experience building responsive web applications & dashboards in React.js, JavaScript (ES6+), TypeScript, with REST API integration, SEO, and analytics.">
     <link rel="canonical" href="https://ashwini06-mate.github.io/portfolio/">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Structured Data (JSON-LD) for SEO -->
@@ -55,7 +55,7 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <h1 class="logo">Ashwini Mate</h1>
+            <a href="#about" class="logo">Ashwini Mate</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#personal">Personal</a></li>
@@ -78,44 +78,35 @@
 
     <!-- Hero Section -->
     <header id="about" class="hero">
-        <div class="container hero-card">
-            <div class="hero-photo">
-                <img src="assets/profile.jpeg" alt="Ashwini Mate - Software Developer" class="profile-photo">
-            </div>
-            <div class="hero-content">
+        <div class="container hero-layout">
+            <div class="hero-copy">
                 <p class="eyebrow">Software Developer • Frontend Specialist</p>
                 <h1 class="name">Ashwini Mate</h1>
                 <h2>Frontend Developer • React.js, TypeScript & Data Analytics</h2>
                 <p class="summary">Frontend Developer with nearly 2 years of experience building responsive web applications and dashboards in React.js, JavaScript (ES6+) and TypeScript. Built enterprise dashboards, workforce management tools, and a multi-product SaaS platform, with REST API integration, reusable component architecture, performance optimization and cross-browser compatibility. Working knowledge of SQL and data visualization from an analytics background. Developing skills in technical SEO, JSON-LD structured data and server-side rendering.</p>
-                
-                <div class="hero-badges">
-                    <span>React.js & TypeScript</span>
-                    <span>7+ Production & Web Apps</span>
-                    <span>Enterprise Dashboards & SaaS</span>
-                    <span>Tailwind CSS & Bootstrap</span>
-                    <span>REST API Integration</span>
-                    <span>Performance Optimization</span>
-                    <span>SQL & Data Analytics</span>
+                <div class="hero-action-group">
+                    <a href="#personal" class="btn primary-btn">View My Work</a>
+                    <a href="assets/Ashwini_Mate_Resume.pdf" class="btn" download="Ashwini_Mate_Resume.pdf">Download Resume</a>
                 </div>
-
+            </div>
+            <div class="hero-aside">
+                <div class="hero-photo">
+                    <img src="assets/profile.jpeg" alt="Ashwini Mate - Software Developer" class="profile-photo">
+                </div>
+            </div>
+            <div class="hero-meta">
                 <div class="contact-info">
                     <a href="mailto:ashwinimate64@gmail.com"><i class="fas fa-envelope"></i> ashwinimate64@gmail.com</a>
                     <a href="tel:+919146461648"><i class="fas fa-phone"></i> +91 9146461648</a>
                     <span><i class="fas fa-map-marker-alt"></i> Pune</span>
                 </div>
-
-                <div class="hero-action-group">
-                    <a href="#personal" class="btn primary-btn">View My Work</a>
-                    <a href="assets/Ashwini_Mate_Resume.pdf" class="btn" download="Ashwini_Mate_Resume.pdf">Download Resume</a>
-                </div>
-
                 <div class="hero-stats">
                     <div class="stat-item">
                         <span class="stat-num">~2 Years</span>
                         <span class="stat-label">Frontend Experience</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-num">7+ Apps</span>
+                        <span class="stat-num">7+ Web Apps</span>
                         <span class="stat-label">React, SaaS & Web Portals</span>
                     </div>
                     <div class="stat-item">
@@ -126,6 +117,15 @@
                         <span class="stat-num">SEO & SQL</span>
                         <span class="stat-label">Core Web Vitals & Analytics</span>
                     </div>
+                </div>
+                <div class="hero-badges">
+                    <span>React.js & TypeScript</span>
+                    <span>7+ Production & Web Apps</span>
+                    <span>Enterprise Dashboards & SaaS</span>
+                    <span>Tailwind CSS & Bootstrap</span>
+                    <span>REST API Integration</span>
+                    <span>Performance Optimization</span>
+                    <span>SQL & Data Analytics</span>
                 </div>
             </div>
         </div>
@@ -158,8 +158,8 @@
     <section id="personal" class="section">
         <div class="container">
             <div class="section-intro">
-                <p class="section-subtitle">Side work</p>
-                <h2 class="section-title">Personal Projects</h2>
+                <!-- <p class="section-subtitle">Side work</p> -->
+                <h2 class="section-title">Selected Works</h2>
             </div>
             <div class="projects-grid">
 
@@ -268,6 +268,53 @@
                     <a class="project-link" href="https://booking.ordinet.co.in/" target="_blank" rel="noopener noreferrer">Visit site <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
 
+                <!-- Vistaar -->
+                <div class="project-card reveal">
+                    <h3>Vistaar</h3>
+                    <span class="project-subtitle">AI manufacturing analytics — marketing site and product dashboard</span>
+                    <div class="project-tags">
+                        <span>React.js</span>
+                        <span>ApexCharts</span>
+                        <span>Zustand</span>
+                        <span>TanStack Table</span>
+                        <span>REST API</span>
+                        <span>GSAP</span>
+                        <span>SEO</span>
+                    </div>
+                    <ul>
+                        <li>Built the public marketing site and the product dashboard for Vistaar, an AI-powered manufacturing analytics platform.</li>
+                        <li>Created a responsive marketing website with feature and solution sections, product demos, GSAP animations, blog pages, contact and newsletter forms, WhatsApp inquiry links, SEO metadata and Google Tag Manager.</li>
+                        <li>Built a responsive React dashboard for analytics, reporting, data visualization, user management and operational monitoring.</li>
+                        <li>Created reusable React components, integrated REST APIs and built interactive charts with ApexCharts, Zustand, React Hook Form and TanStack Table.</li>
+                    </ul>
+                    <a class="project-link" href="https://vistaarai.com/index" target="_blank" rel="noopener noreferrer">Visit site <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                <!-- Artiquity -->
+                <div class="project-card reveal">
+                    <h3>Artiquity</h3>
+                    <span class="project-subtitle">Art workshops & artwork discovery platform (HTML5, CSS3, JavaScript)</span>
+                    <div class="project-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>REST API</span>
+                        <span>Fetch API</span>
+                        <span>Infinite Scroll</span>
+                        <span>Browser Storage</span>
+                    </div>
+                    <ul>
+                        <li>Developed and maintained a responsive, multi-page website for discovering art workshops, artists, venues and artwork.</li>
+                        <li>Integrated frontend pages with REST APIs using JavaScript fetch() to retrieve and display dynamic content.</li>
+                        <li>Implemented search, category and location filtering, pagination and infinite-scroll experiences for browsing listings.</li>
+                        <li>Built workshop, artist, venue and artwork detail pages with image galleries and interactive UI components.</li>
+                        <li>Created pass-selection and scheduling interfaces that preserve selections across steps using browser storage.</li>
+                        <li>Implemented account-related frontend flows, including login screens and client-side session state handling.</li>
+                        <li>Applied responsive layouts and custom CSS styling across desktop and mobile screen sizes.</li>
+                    </ul>
+                    <a class="project-link" href="https://artiquity.in/" target="_blank" rel="noopener noreferrer">Visit site <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+
                 <!-- SFL Punch -->
                 <div class="project-card reveal">
                     <h3>SFL Punch</h3>
@@ -291,46 +338,6 @@
                         <li>Added report export functionality, including Excel downloads for attendance and muster roll reports.</li>
                         <li>Improved usability with responsive layouts, modal dialogs, reusable components and dynamic data tables, supported by component-based design, centralized API configuration and reusable utilities.</li>
                     </ul>
-                </div>
-
-                <!-- Vistaar Dashboard -->
-                <div class="project-card reveal">
-                    <h3>Vistaar Dashboard</h3>
-                    <span class="project-subtitle">Enterprise analytics dashboard (React.js)</span>
-                    <div class="project-tags">
-                        <span>React.js</span>
-                        <span>ApexCharts</span>
-                        <span>Zustand</span>
-                        <span>React Hook Form</span>
-                        <span>TanStack Table</span>
-                        <span>REST API</span>
-                    </div>
-                    <ul>
-                        <li>Built a responsive dashboard with analytics, reporting, data visualization, user management and operational monitoring.</li>
-                        <li>Created reusable React components, integrated REST APIs and built interactive charts with ApexCharts.</li>
-                        <li>Handled application state and data with Zustand, React Hook Form and TanStack Table.</li>
-                    </ul>
-                    <a class="project-link" href="assets/Vistaar_Dashboard.pdf" target="_blank" rel="noopener noreferrer">Open PDF <i class="fas fa-file-pdf"></i></a>
-                </div>
-
-                <!-- Vistaar Landing Page -->
-                <div class="project-card reveal">
-                    <h3>Vistaar Landing Page</h3>
-                    <span class="project-subtitle">Marketing site for AI-powered manufacturing analytics</span>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>GSAP</span>
-                    </div>
-                    <ul>
-                        <li>Built a responsive marketing website showcasing AI-powered manufacturing analytics, features, solutions, and product demos.</li>
-                        <li>Added animated sections and smooth in-page navigation using JavaScript and GSAP.</li>
-                        <li>Created blog pages and dynamic blog content.</li>
-                        <li>Implemented contact and newsletter forms, including WhatsApp inquiry links.</li>
-                        <li>Added SEO metadata and Google Tag Manager integration.</li>
-                    </ul>
-                    <a class="project-link" href="https://vistaarai.com/index" target="_blank" rel="noopener noreferrer">Visit site <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
 
                 <!-- MSPHC Dashboard -->
@@ -389,33 +396,8 @@
                     </ul>
                 </div>
 
-                <!-- Artiquity -->
-                <div class="project-card reveal">
-                    <h3>Artiquity</h3>
-                    <span class="project-subtitle">Art workshops & artwork discovery platform (HTML5, CSS3, JavaScript)</span>
-                    <div class="project-tags">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>REST API</span>
-                        <span>Fetch API</span>
-                        <span>Infinite Scroll</span>
-                        <span>Browser Storage</span>
-                    </div>
-                    <ul>
-                        <li>Developed and maintained a responsive, multi-page website for discovering art workshops, artists, venues and artwork.</li>
-                        <li>Integrated frontend pages with REST APIs using JavaScript fetch() to retrieve and display dynamic content.</li>
-                        <li>Implemented search, category and location filtering, pagination and infinite-scroll experiences for browsing listings.</li>
-                        <li>Built workshop, artist, venue and artwork detail pages with image galleries and interactive UI components.</li>
-                        <li>Created pass-selection and scheduling interfaces that preserve selections across steps using browser storage.</li>
-                        <li>Implemented account-related frontend flows, including login screens and client-side session state handling.</li>
-                        <li>Applied responsive layouts and custom CSS styling across desktop and mobile screen sizes.</li>
-                    </ul>
-                    <a class="project-link" href="https://artiquity.in/" target="_blank" rel="noopener noreferrer">Visit site <i class="fas fa-arrow-up-right-from-square"></i></a>
-                </div>
-
                 <!-- Personal Portfolio -->
-                <div class="project-card reveal">
+                <!-- <div class="project-card reveal">
                     <h3>Freelance Portfolio</h3>
                     <span class="project-subtitle">Personal portfolio website for showcasing work, skills and experience</span>
                     <div class="project-tags">
@@ -433,7 +415,7 @@
                         <li>Applied semantic HTML and optimized metadata for better search visibility and professional presentation.</li>
                         <li>Created a reusable portfolio structure that can be easily updated with new work, accomplishments and project highlights.</li>
                     </ul>
-                </div>
+                </div> -->
 
                 <!-- IshVed Agritech Website -->
                 <div class="project-card reveal">
@@ -687,6 +669,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=3"></script>
 </body>
 </html>

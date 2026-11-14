@@ -52,6 +52,25 @@ const observer = new IntersectionObserver((entries) => {
 
 revealElements.forEach((element) => observer.observe(element));
 
+document.querySelectorAll('#projects .project-card ul').forEach((list) => {
+    const items = list.querySelectorAll('li');
+    if (items.length <= 2) return;
+
+    list.classList.add('is-collapsed');
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'read-more';
+    button.setAttribute('aria-expanded', 'false');
+    button.textContent = 'Read more';
+    list.after(button);
+
+    button.addEventListener('click', () => {
+        const collapsed = list.classList.toggle('is-collapsed');
+        button.setAttribute('aria-expanded', String(!collapsed));
+        button.textContent = collapsed ? 'Read more' : 'Read less';
+    });
+});
+
 // Interactive Skills Filter
 const filterButtons = document.querySelectorAll('.skills-filter-btn');
 const skillCards = document.querySelectorAll('.skills-grid .skill-category');
@@ -65,7 +84,7 @@ filterButtons.forEach((btn) => {
         skillCards.forEach((card) => {
             const category = card.getAttribute('data-category');
             if (filter === 'all' || category === filter) {
-                card.style.display = 'flex';
+                card.style.display = '';
                 card.classList.add('visible');
                 setTimeout(() => {
                     card.style.opacity = '1';
@@ -76,9 +95,20 @@ filterButtons.forEach((btn) => {
                 card.style.transform = 'scale(0.96)';
                 setTimeout(() => {
                     card.style.display = 'none';
+                    layoutSkillCards();
                 }, 220);
             }
         });
+
+        layoutSkillCards();
     });
 });
+
+function layoutSkillCards() {
+    const visible = [...skillCards].filter((card) => getComputedStyle(card).display !== 'none');
+    skillCards.forEach((card) => card.classList.remove('is-solo'));
+    if (visible.length === 1) {
+        visible[0].classList.add('is-solo');
+    }
+}
 
